@@ -1,0 +1,57 @@
+column,original,imputed
+emp_length,,< 1 year
+emp_length_encoded,,0
+grade,1.0,A
+grade,2.0,A
+grade,3.0,A
+grade,4.0,A
+grade,5.0,A
+grade,6.0,B
+grade,7.0,B
+grade,8.0,B
+grade,9.0,B
+grade,10.0,B
+grade,11.0,C
+grade,12.0,C
+grade,13.0,C
+grade,14.0,C
+grade,15.0,C
+grade,16.0,D
+grade,17.0,D
+grade,18.0,D
+grade,19.0,D
+grade,20.0,D
+grade,21.0,E
+grade,22.0,E
+grade,23.0,E
+grade,24.0,E
+grade,25.0,E
+grade,26.0,F
+grade,27.0,F
+grade,28.0,F
+grade,29.0,F
+grade,30.0,F
+grade,31.0,G
+grade,32.0,G
+grade,33.0,G
+grade,34.0,G
+grade,35.0,G
+letter_grade,A,0
+letter_grade,B,1
+letter_grade,C,2
+letter_grade,D,3
+letter_grade,E,4
+letter_grade,F,5
+letter_grade,G,6
+emp_title,,Missing
+emp_length,,< 1 year
+emp_length_encoded,,0
+term,36 months,36
+term,60 months,60
+loan_status,Charged Off,0
+loan_status,Current,1
+loan_status,Default,2
+loan_status,Fully Paid,3
+loan_status,In Grace Period,4
+loan_status,Late (16-30 days),5
+loan_status,Late (31-120 days),6

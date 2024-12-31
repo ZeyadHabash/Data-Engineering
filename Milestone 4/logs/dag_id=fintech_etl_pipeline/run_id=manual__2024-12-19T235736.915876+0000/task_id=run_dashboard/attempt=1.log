@@ -1,0 +1,37 @@
+[2024-12-19T23:58:01.569+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-19T23:58:01.591+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fintech_etl_pipeline.run_dashboard manual__2024-12-19T23:57:36.915876+00:00 [queued]>
+[2024-12-19T23:58:01.600+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fintech_etl_pipeline.run_dashboard manual__2024-12-19T23:57:36.915876+00:00 [queued]>
+[2024-12-19T23:58:01.601+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-19T23:58:01.620+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): run_dashboard> on 2024-12-19 23:57:36.915876+00:00
+[2024-12-19T23:58:01.638+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1031) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-19T23:58:01.642+0000] {standard_task_runner.py:72} INFO - Started process 1040 to run task
+[2024-12-19T23:58:01.642+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fintech_etl_pipeline', 'run_dashboard', 'manual__2024-12-19T23:57:36.915876+00:00', '--job-id', '91', '--raw', '--subdir', 'DAGS_FOLDER/fintech_dag.py', '--cfg-path', '/tmp/tmpjr8xmwtj']
+[2024-12-19T23:58:01.646+0000] {standard_task_runner.py:105} INFO - Job 91: Subtask run_dashboard
+[2024-12-19T23:58:01.723+0000] {task_command.py:467} INFO - Running <TaskInstance: fintech_etl_pipeline.run_dashboard manual__2024-12-19T23:57:36.915876+00:00 [running]> on host b2048de23098
+[2024-12-19T23:58:01.826+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Zeyad_Habash' AIRFLOW_CTX_DAG_ID='fintech_etl_pipeline' AIRFLOW_CTX_TASK_ID='run_dashboard' AIRFLOW_CTX_EXECUTION_DATE='2024-12-19T23:57:36.915876+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-19T23:57:36.915876+00:00'
+[2024-12-19T23:58:01.829+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-19T23:58:01.844+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2024-12-19T23:58:01.845+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'streamlit run /opt/***/dags/fintech_dashboard.py -- --filename /opt/***/data/fintech_clean.parquet --lookup_table_filename /opt/***/data/lookup_table.csv']
+[2024-12-19T23:58:01.861+0000] {subprocess.py:99} INFO - Output:
+[2024-12-19T23:58:04.434+0000] {subprocess.py:106} INFO - 
+[2024-12-19T23:58:04.435+0000] {subprocess.py:106} INFO - Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+[2024-12-19T23:58:04.437+0000] {subprocess.py:106} INFO - 
+[2024-12-19T23:58:05.102+0000] {subprocess.py:106} INFO - 
+[2024-12-19T23:58:05.103+0000] {subprocess.py:106} INFO -   You can now view your Streamlit app in your browser.
+[2024-12-19T23:58:05.105+0000] {subprocess.py:106} INFO - 
+[2024-12-19T23:58:05.106+0000] {subprocess.py:106} INFO -   Local URL: http://localhost:8501
+[2024-12-19T23:58:05.107+0000] {subprocess.py:106} INFO -   Network URL: http://172.18.0.6:8501
+[2024-12-19T23:58:05.108+0000] {subprocess.py:106} INFO -   External URL: http://154.178.37.101:8501
+[2024-12-19T23:58:05.110+0000] {subprocess.py:106} INFO - 
+[2024-12-20T00:03:51.230+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2024-12-20T00:03:51.290+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-20T00:03:51.313+0000] {process_utils.py:132} INFO - Sending 15 to group 1040. PIDs of all processes in the group: [1042, 1040]
+[2024-12-20T00:03:51.337+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 1040
+[2024-12-20T00:03:51.339+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-20T00:03:51.355+0000] {subprocess.py:117} INFO - Sending SIGTERM signal to process group
+[2024-12-20T00:03:51.636+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-20T00:03:51.877+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1040, status='terminated', exitcode=0, started='23:58:01') (1040) terminated with exit code 0
+[2024-12-20T00:03:52.520+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2024-12-20T00:03:52.567+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1042, status='terminated', started='23:58:01') (1042) terminated with exit code None

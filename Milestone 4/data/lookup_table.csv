@@ -1,0 +1,66 @@
+,column,original,imputed
+0,emp_length,< 1 year,0.0
+1,emp_length,1 year,1.0
+2,emp_length,2 years,2.0
+3,emp_length,3 years,3.0
+4,emp_length,4 years,4.0
+5,emp_length,5 years,5.0
+6,emp_length,6 years,6.0
+7,emp_length,7 years,7.0
+8,emp_length,8 years,8.0
+9,emp_length,9 years,9.0
+10,emp_length,10+ years,10.0
+11,grade,1,A
+12,grade,2,A
+13,grade,3,A
+14,grade,4,A
+15,grade,5,A
+16,grade,6,B
+17,grade,7,B
+18,grade,8,B
+19,grade,9,B
+20,grade,10,B
+21,grade,11,C
+22,grade,12,C
+23,grade,13,C
+24,grade,14,C
+25,grade,15,C
+26,grade,16,D
+27,grade,17,D
+28,grade,18,D
+29,grade,19,D
+30,grade,20,D
+31,grade,21,E
+32,grade,22,E
+33,grade,23,E
+34,grade,24,E
+35,grade,25,E
+36,grade,26,F
+37,grade,27,F
+38,grade,28,F
+39,grade,29,F
+40,grade,30,F
+41,grade,31,G
+42,grade,32,G
+43,grade,33,G
+44,grade,34,G
+45,grade,35,G
+46,letter_grade,A,0
+47,letter_grade,B,1
+48,letter_grade,C,2
+49,letter_grade,D,3
+50,letter_grade,E,4
+51,letter_grade,F,5
+52,letter_grade,G,6
+53,emp_title,,Missing
+54,emp_length,,< 1 year
+55,emp_length_encoded,,0
+56,term,36 months,36
+57,term,60 months,60
+58,loan_status,Charged Off,0
+59,loan_status,Current,1
+60,loan_status,Default,2
+61,loan_status,Fully Paid,3
+62,loan_status,In Grace Period,4
+63,loan_status,Late (16-30 days),5
+64,loan_status,Late (31-120 days),6

@@ -1,0 +1,11 @@
+numpy
+pandas
+scikit-learn
+PyYAML
+requests
+SQLAlchemy
+psycopg2-binary
+pyarrow
+docker
+streamlit
+plotly

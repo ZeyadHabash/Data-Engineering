@@ -1,0 +1,66 @@
+[2024-12-20T00:04:26.584+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-20T00:04:26.615+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fintech_etl_pipeline.run_dashboard manual__2024-12-20T00:03:54.730320+00:00 [queued]>
+[2024-12-20T00:04:26.631+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fintech_etl_pipeline.run_dashboard manual__2024-12-20T00:03:54.730320+00:00 [queued]>
+[2024-12-20T00:04:26.632+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-20T00:04:26.654+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): run_dashboard> on 2024-12-20 00:03:54.730320+00:00
+[2024-12-20T00:04:26.669+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1189) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-20T00:04:26.673+0000] {standard_task_runner.py:72} INFO - Started process 1198 to run task
+[2024-12-20T00:04:26.674+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fintech_etl_pipeline', 'run_dashboard', 'manual__2024-12-20T00:03:54.730320+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/fintech_dag.py', '--cfg-path', '/tmp/tmp2s16y7dv']
+[2024-12-20T00:04:26.682+0000] {standard_task_runner.py:105} INFO - Job 95: Subtask run_dashboard
+[2024-12-20T00:04:26.870+0000] {task_command.py:467} INFO - Running <TaskInstance: fintech_etl_pipeline.run_dashboard manual__2024-12-20T00:03:54.730320+00:00 [running]> on host b2048de23098
+[2024-12-20T00:04:27.141+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Zeyad_Habash' AIRFLOW_CTX_DAG_ID='fintech_etl_pipeline' AIRFLOW_CTX_TASK_ID='run_dashboard' AIRFLOW_CTX_EXECUTION_DATE='2024-12-20T00:03:54.730320+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-20T00:03:54.730320+00:00'
+[2024-12-20T00:04:27.147+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-20T00:04:27.186+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2024-12-20T00:04:27.189+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'streamlit run /opt/***/dags/fintech_dashboard.py -- --filename /opt/***/data/fintech_clean.parquet --lookup_table_filename /opt/***/data/lookup_table.csv']
+[2024-12-20T00:04:27.234+0000] {subprocess.py:99} INFO - Output:
+[2024-12-20T00:04:29.851+0000] {subprocess.py:106} INFO - 
+[2024-12-20T00:04:29.852+0000] {subprocess.py:106} INFO - Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+[2024-12-20T00:04:29.853+0000] {subprocess.py:106} INFO - 
+[2024-12-20T00:04:30.630+0000] {subprocess.py:106} INFO - 
+[2024-12-20T00:04:30.632+0000] {subprocess.py:106} INFO -   You can now view your Streamlit app in your browser.
+[2024-12-20T00:04:30.633+0000] {subprocess.py:106} INFO - 
+[2024-12-20T00:04:30.636+0000] {subprocess.py:106} INFO -   Local URL: http://localhost:8501
+[2024-12-20T00:04:30.638+0000] {subprocess.py:106} INFO -   Network URL: http://172.18.0.6:8501
+[2024-12-20T00:04:30.640+0000] {subprocess.py:106} INFO -   External URL: http://154.178.37.101:8501
+[2024-12-20T00:04:30.642+0000] {subprocess.py:106} INFO - 
+[2024-12-20T03:59:24.108+0000] {job.py:229} INFO - Heartbeat recovered after 10902.83 seconds
+[2024-12-20T18:55:03.496+0000] {job.py:229} INFO - Heartbeat recovered after 53739.44 seconds
+[2024-12-20T18:55:24.998+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to up_for_retry. Terminating instance.
+[2024-12-20T18:55:25.015+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-20T18:55:25.031+0000] {process_utils.py:132} INFO - Sending 15 to group 1198. PIDs of all processes in the group: [1200, 1198]
+[2024-12-20T18:55:25.034+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 1198
+[2024-12-20T18:55:25.054+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-20T18:55:25.099+0000] {subprocess.py:117} INFO - Sending SIGTERM signal to process group
+[2024-12-20T18:55:25.393+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 257, in execute
+    result = self._run_inline_command(bash_path=bash_path, env=env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 284, in _run_inline_command
+    return self.subprocess_hook.run_command(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/subprocess.py", line 104, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3095, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2024-12-20T18:55:25.501+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=fintech_etl_pipeline, task_id=run_dashboard, run_id=manual__2024-12-20T00:03:54.730320+00:00, execution_date=20241220T000354, start_date=20241220T000426, end_date=20241220T185525
+[2024-12-20T18:55:25.663+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-20T18:55:26.114+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1198, status='terminated', exitcode=2, started='00:04:26') (1198) terminated with exit code 2
+[2024-12-20T18:55:27.097+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2024-12-20T18:55:28.140+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=1200, status='terminated', started='00:04:26') (1200) terminated with exit code None
